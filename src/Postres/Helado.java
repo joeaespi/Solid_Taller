@@ -12,7 +12,7 @@ import Otros.Aderezo;
  *
  * @author Pedro Mendoza
  */
-public class Helado{
+public class Helado {
     private String sabor;
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;

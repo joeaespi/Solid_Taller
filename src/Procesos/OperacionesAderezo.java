@@ -13,7 +13,7 @@ import Postres.Helado;
  *
  * @author Pedro Mendoza
  */
-public class OperacionesAderezo {
+public class OperacionesAderezo  {
     
     public static void anadirAderezoHelado(Helado helado,Aderezo aderezo){
         helado.getAderezos().add(aderezo);
