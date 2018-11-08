@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Leche;
+package Procesos_corregido;
 
+import Leche_corregida.Tipos_Leches;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author Joel Espinoza
  */
-public class LecheDeslactosada{
-
-    public void usar() {
-        //UsandoLecheDeslactosada
-    }
-    
+public interface CambioLeche {
+    void cambioLeche(Tipos_Leches leches);
 }

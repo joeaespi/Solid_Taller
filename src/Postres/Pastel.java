@@ -17,6 +17,7 @@ public class Pastel{
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;
     
+    
     public Pastel(String sabor){
         aderezos= new ArrayList<>();
         this.sabor=sabor;

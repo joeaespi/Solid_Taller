@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Leche;
-
+package Leche_corregida;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author Tonny
  */
-public class LecheDeslactosada{
-
-    public void usar() {
-        //UsandoLecheDeslactosada
-    }
-    
+public enum Tipos_Leches {
+    Entera,
+    Descremada,
+    Deslactosada
 }

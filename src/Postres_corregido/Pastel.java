@@ -5,7 +5,9 @@
  */
 package Postres_corregido;
 
+import Leche_corregida.Tipos_Leches;
 import Otros.Aderezo;
+import Procesos_corregido.CambioLeche;
 import Procesos_corregido.Operaciones;
 import java.util.ArrayList;
 
@@ -13,14 +15,16 @@ import java.util.ArrayList;
  *
  * @author USER
  */
-public class Pastel implements Operaciones{
+public class Pastel implements Operaciones, CambioLeche{
      private String sabor;
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;
+    private Tipos_Leches leche;
     
     public Pastel(String sabor){
         aderezos= new ArrayList<>();
         this.sabor=sabor;
+        leche = Tipos_Leches.Entera;
     }
     
     public double calcularPrecioFinal(){
@@ -48,6 +52,21 @@ public class Pastel implements Operaciones{
     public void quitarAderezo(Object O, Aderezo aderezo) {
        Pastel p= (Pastel) O;
          p.getAderezos().remove(aderezo);
+    }
+
+    public Tipos_Leches getLeche() {
+        return leche;
+    }
+
+    public void setLeche(Tipos_Leches leche) {
+        this.leche = leche;
+    }
+    
+
+    @Override
+    public void cambioLeche(Tipos_Leches leches) {
+        setLeche(leches);
+        System.out.println("Usando leche " + leches);
     }
     
 }

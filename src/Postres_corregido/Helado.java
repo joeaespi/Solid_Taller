@@ -5,7 +5,9 @@
  */
 package Postres_corregido;
 
+import Leche_corregida.Tipos_Leches;
 import Otros.Aderezo;
+import Procesos_corregido.CambioLeche;
 import Procesos_corregido.Operaciones;
 import java.util.ArrayList;
 
@@ -13,16 +15,18 @@ import java.util.ArrayList;
  *
  * @author USER
  */
-public class Helado implements Operaciones {
+public class Helado implements Operaciones, CambioLeche {
      private String sabor;
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;
-    
+   private Tipos_Leches leche;
     public Helado(String sabor){
         aderezos= new ArrayList<>();
         this.sabor=sabor;
+        leche = Tipos_Leches.Entera;
     }
     
+
     public double calcularPrecioFinal(){
         double precioFinal;
         precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
@@ -49,6 +53,24 @@ public class Helado implements Operaciones {
         Helado h= (Helado) O;
          h.getAderezos().remove(aderezo);
     }
+
+    public Tipos_Leches getLeche() {
+        return leche;
+    }
+
+    public void setLeche(Tipos_Leches leche) {
+        this.leche = leche;
+    }
+
+    @Override
+    public void cambioLeche(Tipos_Leches leches) {
+        setLeche(leches);
+        System.out.println("Usando leche " + leches);
+    }
+    
+    
+
+ 
     
     
 }
