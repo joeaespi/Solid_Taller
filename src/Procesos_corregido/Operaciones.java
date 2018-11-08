@@ -6,7 +6,6 @@
 package Procesos_corregido;
 
 import Otros.Aderezo;
-import Postres.Helado;
 
 /**
  *
@@ -15,6 +14,6 @@ import Postres.Helado;
 public interface Operaciones {
      public abstract void anadirAderezo(Object O,Aderezo aderezo);
      public abstract void quitarAderezo(Object O,Aderezo aderezo);
-     
+     public abstract double calcularPrecioFinal();
     
 }

@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package Principal_corregido;
-import Principal.*;
 import Postres_corregido.*;
-import Procesos.*;
-import Leche.*;
 import Leche_corregida.Tipos_Leches;
 import Otros.*;
 /**
