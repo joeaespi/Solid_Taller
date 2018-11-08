@@ -24,15 +24,7 @@ public class Helado implements Operaciones, CambioLeche {
         aderezos= new ArrayList<>();
         this.sabor=sabor;
         leche = Tipos_Leches.Entera;
-    }
-    
-
-    public double calcularPrecioFinal(){
-        double precioFinal;
-        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
-        return precioFinal;
-    }
-
+    }    
     public ArrayList<Aderezo> getAderezos() {
         return aderezos;
     }
@@ -67,10 +59,10 @@ public class Helado implements Operaciones, CambioLeche {
         setLeche(leches);
         System.out.println("Usando leche " + leches);
     }
-    
-    
-
- 
-    
-    
+    @Override
+    public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
+    }        
 }

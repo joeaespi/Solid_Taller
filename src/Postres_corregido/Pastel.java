@@ -26,12 +26,6 @@ public class Pastel implements Operaciones, CambioLeche{
         this.sabor=sabor;
         leche = Tipos_Leches.Entera;
     }
-    
-    public double calcularPrecioFinal(){
-        double precioFinal;
-        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
-        return precioFinal;
-    }
 
     public ArrayList<Aderezo> getAderezos() {
         return aderezos;
@@ -67,6 +61,12 @@ public class Pastel implements Operaciones, CambioLeche{
     public void cambioLeche(Tipos_Leches leches) {
         setLeche(leches);
         System.out.println("Usando leche " + leches);
+    }
+    @Override
+    public double calcularPrecioFinal(){
+        double precioFinal;
+        precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
+        return precioFinal;
     }
     
 }
